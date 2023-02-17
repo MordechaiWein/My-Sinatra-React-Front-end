@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  line-height: 30px;
+  color: #F58426;
+  font-family: proxima nova;
 }
 
 .App-logo {

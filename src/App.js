@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import Navigation from './Navigation';
+import Home from './Home';
+import Stores from './Stores';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 function App() {
+
+  const [stores, setStores] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:9292/stores")
+    .then(response => response.json())
+    .then(data => console.log(data))
+  },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navigation />
+      <Switch>
+        <Route exact path="/" >
+          <Home />
+        </Route>
+        <Route exact path="/stores" >
+          <Stores />
+        </Route>
+      </Switch>
     </div>
-  );
+  )
 }
 
 export default App;

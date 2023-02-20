@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import Home from './Home';
 import Stores from './Stores';
-import Item from './Item';
+import StoreDetail from './StoreDetail';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -31,7 +31,7 @@ function App() {
           <Stores stores={stores} addStore={addStore} />
         </Route>
         <Route path="/stores/:id">
-          <Item stores={stores} />
+          <StoreDetail stores={stores} />
         </Route>
       </Switch>
     </div>

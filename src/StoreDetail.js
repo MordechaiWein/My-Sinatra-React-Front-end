@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemsContainer from "./ItemsContainer";
 import { useParams } from "react-router-dom";
 
-function Item({ stores }) {
+function StoreDetail({ stores }) {
     
     const params = useParams()
     const [market, setMarket] = useState([])
@@ -81,4 +81,4 @@ function Item({ stores }) {
     )
 }
 
-export default Item
+export default StoreDetail

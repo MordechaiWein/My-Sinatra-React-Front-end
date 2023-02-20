@@ -24,3 +24,62 @@ code {
   font-size: 80px;
 }
 
+.links {
+  color: cornsilk;
+  font-size: 25px;
+}
+
+.linkCenter {
+  text-align: center;
+}
+
+
+.linkForm {
+  color: cornsilk;
+  margin: 150px;
+  background-color: #033536;
+  display: inline-block;
+}
+
+
+
+.formStyle {
+  height: 30px;
+  width: 300px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.formStyleSubmit {
+  height: 37px;
+  display: block;
+  margin-bottom: 15px;
+  
+}
+
+.card {
+  
+  width: 16rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 0.5rem 0.5rem;
+  color: cornsilk;
+  background-color: #033536;
+ }
+ 
+.image {
+  justify-self: center;
+  height: 180px;
+  width: 225px;
+}
+
+.formStyle1 {
+  height: 30px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.formStyleSubmit1 {
+  height: 36px;
+  margin-bottom: 15px;
+}

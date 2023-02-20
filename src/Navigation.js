@@ -6,7 +6,7 @@ const linkStyles = {
   width: "50px",
   padding: "20px",
   margin: "0 6px 6px",
-  background: "#F58426",
+  background: "#FF5F1F",
   textDecoration: "none",
   color: "white",
 }
@@ -15,8 +15,8 @@ function Navigation() {
     
     return (
         <div>
-            <NavLink to="/" exact style={linkStyles} activeStyle={{background: "#EB6123" }}> Home </NavLink>
-            <NavLink to="/stores" exact style={linkStyles} activeStyle={{background: "#EB6123" }}> Stores </NavLink>
+            <NavLink to="/" exact style={linkStyles} activeStyle={{background: "#CC5500" }}> Home </NavLink>
+            <NavLink to="/stores" exact style={linkStyles} activeStyle={{background: "#CC5500" }}> Stores </NavLink>
         </div>
     )
 }

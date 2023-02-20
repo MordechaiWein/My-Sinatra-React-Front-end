@@ -6,7 +6,7 @@ function Home() {
         <div className="App">
             <h1 className="larger">🦉 Night Owl 🦉</h1>
             <h1>The app for people living a nocturnal lifestyle</h1>
-            <h2>Serving the new york city area !</h2>
+            <h2>Serving the New York City area !</h2>
             <br/>
             <br/>
             <br/>

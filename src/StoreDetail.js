@@ -14,9 +14,14 @@ function StoreDetail({ stores }) {
     })
 
     const storeInfo = stores.find(store => parseInt(params.id) === store.id)
-    const [singleStore, setSingleStore] = useState(storeInfo?.items)
-  
+    // const [singleStore, setSingleStore] = useState(storeInfo?.items)
+    const [singleStore, setSingleStore] = useState(storeInfo ? storeInfo.items : [])
 
+    useEffect(() => {
+        if (storeInfo) {
+          setSingleStore(storeInfo.items)
+        }
+      }, [storeInfo])
 
     // useEffect(() => {
     //     fetch(`http://localhost:9292/stores/${params.id}`)

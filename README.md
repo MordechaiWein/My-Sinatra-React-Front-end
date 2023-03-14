@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Night Owl (phase-3 final-project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+My name is Mordechai Wein. This App has a frontend written in React and a backend written in Ruby. The app contains two database tables. These tables have a has many relationship. The backend of this project utilizes classes and instances as well as ActiveRecord and Sinatra for complete CRUD capability.
 
-In the project directory, you can run:
+## Description 
 
-### `npm start`
+People awake all night need an app to tell them where open stores are. So I decided to make an app to serve this purpose. So now, nocturnal individuals can run out and satisfy those late-night cravings.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My app has a store and an item model. Each refers to a database table I created. The stores and items tables have a has many relationship. For the store database, there are both read and get Sinatra routes. Also, there are full CRUD routes for the items endpoint.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On the frontend, the app has a friendly home page and a store page. There is a form to post a new store to the store's table on the store page. Each store is listed below this form. Clicking on any store will dynamically render the store's information as well as all of the store's items.
 
-### `npm test`
+With the help of some CSS, each item is represented on an individual card. The card presents the item's name, image, and price. Below the price is an out-of-stock button. Clicking this button will erase the item from the page and the database. Each card also contains an edit form to edit the item price. Typing a new price will patch the data and update the price. Finally, on the top of the page, there is a form to add an item to the webpage.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When the new item is posted to the items endpoint, it will automatically be associated with the correct store and be added to the page as one of the store's items.
 
-### `npm run build`
+Here is a link to the frontend of my project:
+https://github.com/MordechaiWein/My-Sinatra-React-Front-end
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Credit 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Much of the CSS in my project was adapted from Flatiron School labs. This includes the styling of my form, listing cards, and NavLinks. For this, I would like to give credit to Flatiron School.

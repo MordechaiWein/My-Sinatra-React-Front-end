@@ -9,7 +9,7 @@ import './App.css';
 function App() {
 
   const [stores, setStores] = useState([])
-
+  
   useEffect(() => {
     fetch("http://localhost:9292/stores")
     .then(response => response.json())
@@ -31,7 +31,7 @@ function App() {
           <Stores stores={stores} addStore={addStore} />
         </Route>
         <Route path="/stores/:id">
-          <StoreDetail stores={stores} />
+          <StoreDetail stores={stores}/>
         </Route>
       </Switch>
     </div>

@@ -14,35 +14,38 @@ function StoreDetail({ stores }) {
     })
 
     const storeInfo = stores.find(store => parseInt(params.id) === store.id)
+    const [singleStore, setSingleStore] = useState(storeInfo?.items)
+  
 
-    useEffect(() => {
-        fetch(`http://localhost:9292/stores/${params.id}`)
-        .then(response => response.json())
-        .then(data => setMarket(data.items))
-    },[])
 
+    // useEffect(() => {
+    //     fetch(`http://localhost:9292/stores/${params.id}`)
+    //     .then(response => response.json())
+    //     .then(data => setMarket(data.items))
+    // },[])
+       
     function handleChangeItem(event) {
         setItemData({...itemData,[event.target.name]: event.target.value})
     }
 
     function addItem(newItem) {
-        setMarket([...market, newItem])
+        setSingleStore([...singleStore, newItem])
     }
 
     function getRidOfItem(erasedItem) {
-        const itemsToDisplay = market.filter(product => product.id !== erasedItem.id)
-        setMarket(itemsToDisplay)
+        const itemsToDisplay = singleStore.filter(product => product.id !== erasedItem.id)
+        setSingleStore(itemsToDisplay)
     }
 
     function updateItem(updatedItem) {
-        const updatedProduct = market.map((product) => {
+        const updatedProduct = singleStore.map((product) => {
             if (product.id === updatedItem.id) {
             return updatedItem
             } else {
             return product
             }
         })
-        setMarket(updatedProduct)
+        setSingleStore(updatedProduct)
     }
     
     function handleSubmitItem(e) {
@@ -63,7 +66,7 @@ function StoreDetail({ stores }) {
             store_id: parseInt(params.id)
         })
     }
-    
+
     return(
         <div className="App">
             <h1>{storeInfo?.name}</h1>
@@ -76,7 +79,7 @@ function StoreDetail({ stores }) {
                 <input onChange={handleChangeItem} className="formStyle1" type="text" name="price" value={itemData.price} placeholder="Enter item price"/>
                 <input onChange={handleChangeItem} className="formStyleSubmit1" type="submit"/>
             </form>
-            <ItemsContainer market={market} getRidOfItem={getRidOfItem} updateItem={updateItem}/>
+            <ItemsContainer singleStore={singleStore} market={market} getRidOfItem={getRidOfItem} updateItem={updateItem}/> 
         </div>
     )
 }
